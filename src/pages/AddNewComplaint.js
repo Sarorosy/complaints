@@ -30,7 +30,7 @@ const AddNewComplaint = () => {
 
     try {
       // Send the complaint data to the server
-      const response = await axios.post('http://localhost:5000/api/complaints', complaintData);
+      const response = await axios.post('https://cback-p76y.onrender.com/api/complaints', complaintData);
       console.log(response.data)
       toast.success('Complaint submitted successfully!');
       

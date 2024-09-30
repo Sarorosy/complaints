@@ -17,7 +17,7 @@ const AssignComplaint = () => {
     // Fetch all complaints
     const fetchComplaints = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/allcomplaints');
+            const response = await axios.get('https://cback-p76y.onrender.com/api/allcomplaints');
             setComplaints(response.data);
         } catch (error) {
             console.error('Error fetching complaints:', error);
@@ -27,7 +27,7 @@ const AssignComplaint = () => {
     // Fetch all agents
     const fetchAgents = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/agents');
+            const response = await axios.get('https://cback-p76y.onrender.com/api/agents');
             setAgents(response.data);
         } catch (error) {
             console.error('Error fetching agents:', error);
@@ -43,7 +43,7 @@ const AssignComplaint = () => {
         }
 
         try {
-            await axios.patch(`http://localhost:5000/api/allcomplaints/${complaintId}`, {
+            await axios.patch(`https://cback-p76y.onrender.com/api/allcomplaints/${complaintId}`, {
                 assignedTo: selectedAgent, // Add the assigned agent ID
             });
             

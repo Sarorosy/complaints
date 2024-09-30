@@ -22,15 +22,15 @@ const Dashboard = () => {
                 let data;
 
                 if (userRole === 'user') {
-                    response = await fetch(`http://localhost:5000/api/user/complaints?userId=${userId}`);
+                    response = await fetch(`https://cback-p76y.onrender.com/api/user/complaints?userId=${userId}`);
                     data = await response.json();
                     setUserData(data); // Assuming data contains the number of complaints, resolved, pending
                 } else if (userRole === 'admin') {
-                    response = await fetch('http://localhost:5000/api/admin/stats');
+                    response = await fetch('https://cback-p76y.onrender.com/api/admin/stats');
                     data = await response.json();
                     setAdminData(data); // Assuming data contains the number of users, agents, complaints, resolved, pending
                 } else if (userRole === 'agent') {
-                    response = await fetch(`http://localhost:5000/api/agent/${userId}/stats`);
+                    response = await fetch(`https://cback-p76y.onrender.com/api/agent/${userId}/stats`);
                     data = await response.json();
                     setAgentData(data); // Assuming data contains the number of assigned, pending, resolved requests
                 }

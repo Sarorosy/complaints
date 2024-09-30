@@ -9,7 +9,7 @@ const NotificationOffcanvas = ({ isOpen, onClose, userId }) => {
             const fetchNotifications = async () => {
                 try {
                     // Example API call (replace with your actual API)
-                    const response = await fetch(`http://localhost:5000/api/notifications?userId=${userId}`);
+                    const response = await fetch(`https://cback-p76y.onrender.com/api/notifications?userId=${userId}`);
                     const data = await response.json();
                     setNotifications(data);
                 } catch (error) {

@@ -9,7 +9,7 @@ const AssignedComplaints = () => {
     useEffect(() => {
         const fetchAssignedComplaints = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/assignedcomplaints?assignedto=${userId}`);
+                const response = await fetch(`https://cback-p76y.onrender.com/api/assignedcomplaints?assignedto=${userId}`);
                 const data = await response.json();
                 setComplaints(data);
             } catch (error) {

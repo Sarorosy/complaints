@@ -12,7 +12,7 @@ const ComplaintDetails = () => {
     useEffect(() => {
         const fetchComplaintDetails = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/complaintdetails/${id}`);
+                const response = await fetch(`https://cback-p76y.onrender.com/api/complaintdetails/${id}`);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
@@ -36,7 +36,7 @@ const ComplaintDetails = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`http://localhost:5000/api/updatecomplaint/${id}`, {
+            const response = await fetch(`https://cback-p76y.onrender.com/api/updatecomplaint/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
